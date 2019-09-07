@@ -4,7 +4,7 @@ CONFIG_FILE_NAME=signingCA.cnf
 KEY_PASS_FILE_NAME=keyPass.txt
 ROOT_CERT_PASS_FILE_NAME=CAPass.txt
 ROOT_CERT_FILE_NAME=cerRootCA.pem
-ROOT_KEY_FILE_NAME=keyRootCA.pem
+ROOT_KEY_FILE_NAME=keyRootCA.key
 
 openssl req \
 	-x509 \

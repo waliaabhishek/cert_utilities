@@ -1,2 +1,7 @@
 .idea/
 .DS_Store
+CAUtils/issuedCerts/
+LeafUtils/UsedCSRs/*.pem
+LeafUtils/*.key
+LeafUtils/*.pem
+LeafUtils/*.csr

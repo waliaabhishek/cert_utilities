@@ -24,7 +24,7 @@ do
   fi
 
   #### Create config for use in CSR Request accepted format
-  echo "subjectAltName = $DNS_NAMES_STRING" > $TEMP_FILE
+  echo "subjectAltName = $DNS_NAMES_STRING" > $TEMP_FILE_NAME
 
   # Create the Certificate Key
   openssl genrsa \
@@ -33,7 +33,7 @@ do
     -out $CN_NAME_STRING.key \
     4096
   # Create one single file with all the configs ( tried cat withount new file, but openssl was flaky
-  cat $CSRCONF_FILE $TEMP_FILE > $CONCAT_FILE
+  cat $CSRCONF_FILE_NAME $TEMP_FILE_NAME > $CONCAT_FILE_NAME
   # Generate CSR Request
   openssl req \
     -new \
@@ -42,8 +42,8 @@ do
     -passin file:$KEY_PASS_FILE_NAME \
     -subj "/CN=$CN_NAME_STRING" \
     -out $CN_NAME_STRING.csr \
-    -config $CONCAT_FILE
+    -config $CONCAT_FILE_NAME
 done
 
 ## Clean Up
-rm $TEMP_FILE $CONCAT_FILE
+rm $TEMP_FILE_NAME $CONCAT_FILE_NAME
