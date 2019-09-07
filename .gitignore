@@ -1,7 +1,11 @@
 .idea/
 .DS_Store
-CAUtils/issuedCerts/
+CAUtils/*.pem
+CAUtils/*.key
+CAUtils/issuedCerts/index.txt
+CAUtils/issuedCerts/serial.txt
 LeafUtils/UsedCSRs/*.pem
+LeafUtils/UsedCSRs/*.csr
 LeafUtils/*.key
 LeafUtils/*.pem
 LeafUtils/*.csr
