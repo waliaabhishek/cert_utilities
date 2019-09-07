@@ -1,0 +1,30 @@
+####################################################################
+[ req ]
+default_bits          = 2048
+default_md            = sha256
+distinguished_name    = AbhisheksDN
+attributes            = req_attributes
+req_extensions 	      = req_ext
+####################################################################
+
+####################################################################
+[ AbhisheksDN ]
+C = US
+ST = CA
+L = Sunnyvale
+OU = Walia LLC OU
+commonName                     = Walia LLC CN
+commonName_max                 = 128
+emailAddress                   = abhishek@confluent.io
+emailAddress_max               = 64
+####################################################################
+
+####################################################################
+[ req_attributes ]
+challengePassword              = Confluent2019!
+challengePassword_min          = 4
+challengePassword_max          = 20
+####################################################################
+
+####################################################################
+[req_ext]
