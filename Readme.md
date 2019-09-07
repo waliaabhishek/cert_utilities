@@ -19,6 +19,29 @@ This project provides a few utilities to ease the pain of certificate management
 ### Generate Root Authority 
 
 1. Clone the Repo.
+2. `change directory to CAUtils` : This is required in the current version. 
+CA scripts are dependent on $PWD being the CAUtils folder for proper functioning.
+3. ` execute issueRootCerts.sh` : This will generate the Root Authority Key and certificate.
+The key is stored in `keyRootCA.key` and Root CA is stored in `cerRootCA.pem`
+
+### Generate CSRs
+1. `change directory to LeafUtils` : This is required in the current version. 
+Leaf scripts are dependent on $PWD being the LeafUtils folder for proper functioning.
+2. `execute issueCSRs.sh` : This will create a CSR request with all the SAN names in the hosts.txt included.
+
+### Generate Signed Certificates
+1. `change directory to CAUtils` : This is required in the current version. 
+CA scripts are dependent on $PWD being the CAUtils folder for proper functioning.
+2. `run issueSignedCerts.sh` :  This will read all the CSR's created in the ../LeafUtils folder and generate corresponding Signed certificates for them.
+The signed certificates will be stored in the ../LeafUtils folder for further use.
+The CSR's picked up from ../LeafUtils folder for creating signed certificates will moved the ../LeafUtils/UsedCSRs by default. 
+This is done to prevent recreation of another certificate for existing ones during next run for signed certificates.  
+
+## Detailed Run 
+
+### Generate Root Authority 
+
+1. Clone the Repo.
 2. `run nukeEverything.sh` : This command will clean any remnants (if any) from the project folder and help you start fresh.
 3. `change directory to CAUtils` : This is required in the current version. 
 CA scripts are dependent on $PWD being the CAUtils folder for proper functioning.
