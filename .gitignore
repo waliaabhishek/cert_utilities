@@ -2,8 +2,8 @@
 .DS_Store
 CAUtils/*.pem
 CAUtils/*.key
-CAUtils/issuedCerts/index.txt
-CAUtils/issuedCerts/serial.txt
+CAUtils/issuedCerts/*.pem
+CAUtils/issuedCerts/*.old
 LeafUtils/UsedCSRs/*.pem
 LeafUtils/UsedCSRs/*.csr
 LeafUtils/*.key
