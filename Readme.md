@@ -5,7 +5,8 @@
 During my hunt to find a decent utility for managing the certificate workflow, I was not able to find anything decent
 or highly configurable.
 There was nothing available which could perform certificate workflow management i.e Create Root CA >> 
-Generate CSR ( including Dynamic SAN values ) >> Sign CSR's with your Root Authority. 
+Generate CSR ( including Dynamic SAN values ) >> Sign CSR's with your Root Authority.
+With help from Scott Griz and his base scripts, I started working on something fully automated.  
 
 This project provides a few utilities to ease the pain of certificate management with few commands.
  The project will perform the following actions:
