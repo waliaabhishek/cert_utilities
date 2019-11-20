@@ -15,6 +15,8 @@ LEAF_CSR_FILE_PATH=$PWD
 LEAF_CSR_USED_FILE_PATH=$LEAF_CSR_FILE_PATH/UsedCSRs
 cd -
 
+cp cerRootCA.pem $LEAF_CSR_FILE_PATH/cerRootCA.pem
+
 for fileName in $LEAF_CSR_FILE_PATH/*.csr
 do
   echo "#######################################################################"

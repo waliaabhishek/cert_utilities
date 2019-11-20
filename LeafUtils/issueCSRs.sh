@@ -38,11 +38,11 @@ do
   openssl req \
     -new \
     -sha256 \
-    -key $CN_NAME_STRING.key \
-    -passin file:$KEY_PASS_FILE_NAME \
-    -subj "/CN=$CN_NAME_STRING" \
     -out $CN_NAME_STRING.csr \
+    -key $CN_NAME_STRING.key \
+    -passin file:"$KEY_PASS_FILE_NAME" \
     -config $CONCAT_FILE_NAME
+
 done
 
 ## Clean Up
