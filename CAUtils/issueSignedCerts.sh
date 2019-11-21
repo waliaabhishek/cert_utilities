@@ -26,6 +26,8 @@ do
 
   openssl ca \
     -batch \
+    -md sha256 \
+    -notext \
     -config $CONFIG_FILE_NAME \
     -policy signing_policy  \
     -passin file:"$ROOT_CERT_PASS_FILE_NAME" \
