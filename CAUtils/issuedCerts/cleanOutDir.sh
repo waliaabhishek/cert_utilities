@@ -1,12 +1,19 @@
 #!/bin/bash
 
-echo "Removing Cached Certificates"
-rm *.pem
+correctBaseDir="issuedCerts"
+baseDir=`basename \`pwd\``
 
-echo "removing remnant working files"
-rm *.old
+if [ $baseDir = $correctBaseDir ]
+then
+  echo "Removing Cached Certificates"
+  rm ./*.pem 2>/dev/null
 
-rm index.txt
-touch index.txt
-echo '01' > serial.txt
+  echo "removing remnant working files"
+  rm ./*.old 2>/dev/null
 
+  rm ./index.txt 2>/dev/null
+  touch index.txt
+  echo '01' > serial.txt
+else
+  echo "please run this script from ../$correctBaseDir"
+fi
