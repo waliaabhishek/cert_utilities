@@ -15,6 +15,17 @@ This project provides a few utilities to ease the pain of certificate management
 * Sign CSRs with your Root Authority and record signed certificates. 
 
 ## Quick Start
+### Workflow Runner 
+
+* `Edit ./LeafUtils/hosts.txt` Edit the hosts.txt file to have only the list of hostnames for which you want to generate the Signed Certificates.
+* `Execute runWorkflow.sh` You will be presented with 4 options. 
+  - `Option 1` Just to delete everything and get to a clean state in case of any issues, select option 1. 
+  - `Option 2` Go with this option when you have edited your hosts.txt and want to generate new certificates without deleting anything 
+  - `Option 3` Go with this option, when you want to clean initialize everything. 
+  - `Option 4` Do nothing and exit. I was just checking if the script even works or not. :D 
+* That's all ! :) 
+
+A more detailed route :
 
 ### Generate Root Authority 
 
