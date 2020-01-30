@@ -41,7 +41,7 @@ then
 fi
 
 echo "********************************************************************"
-select choiceValue in "Clean Up everything" "Just run it, No questions asked" "Clean up and run the workflow" "Just Exit"; do
+select choiceValue in "Clean Up everything" "Just run it, No questions asked" "Clean up and run the workflow" "Just Exit" ; do
   case $choiceValue in
       "Clean Up everything" )
         clean_up

@@ -2,6 +2,7 @@
 .DS_Store
 CAUtils/*.pem
 CAUtils/*.key
+CAUtils/*.crt
 CAUtils/issuedCerts/*.pem
 CAUtils/issuedCerts/*.old
 LeafUtils/UsedCSRs/*.pem
@@ -9,3 +10,4 @@ LeafUtils/UsedCSRs/*.csr
 LeafUtils/*.key
 LeafUtils/*.pem
 LeafUtils/*.csr
+LeafUtils/*.crt

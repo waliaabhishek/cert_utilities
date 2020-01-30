@@ -20,7 +20,7 @@ then
   LEAF_CSR_USED_FILE_PATH=$LEAF_CSR_FILE_PATH/UsedCSRs
   cd -
 
-  cp cerRootCA.pem $LEAF_CSR_FILE_PATH/cerRootCA.pem
+  cp cerRootCA.crt $LEAF_CSR_FILE_PATH/cerRootCA.crt
 
   for fileName in $LEAF_CSR_FILE_PATH/*.csr
   do
@@ -37,10 +37,10 @@ then
       -policy signing_policy  \
       -passin file:"$ROOT_CERT_PASS_FILE_NAME" \
       -extensions signing_req \
-      -out "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.pem" \
+      -out "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.crt" \
       -infiles "$fileName"
 
-    echo "Signed certificate available at "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.pem
+    echo "Signed certificate available at "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.crt
     mv $fileName $LEAF_CSR_USED_FILE_PATH/$cleanFileName
     echo "#######################################################################"
   done
