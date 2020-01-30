@@ -8,6 +8,9 @@ then
   echo "Removing Cached Certificates"
   rm ./*.crt 2>/dev/null
 
+  echo "Removing Cached Certificates"
+  rm ./*.pem 2>/dev/null
+
   echo "removing remnant working files"
   rm ./*.old 2>/dev/null
 
