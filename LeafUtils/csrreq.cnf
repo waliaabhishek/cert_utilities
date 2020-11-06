@@ -14,7 +14,7 @@ countryName                     = US
 stateOrProvinceName             = CA
 localityName                    = Sunnyvale
 organizationalUnitName          = Walia LLC OU
-commonName                     	= Walia LLC CN
+commonName                     	= __ENV_COMMON_NAME__
 organizationName                = Walia LLC
 ####################################################################
 
@@ -25,4 +25,5 @@ challengePassword              = Confluent2019!
 
 ####################################################################
 [req_ext]
-
+keyUsage                = critical,digitalSignature,keyEncipherment
+extendedKeyUsage        = serverAuth,clientAuth
