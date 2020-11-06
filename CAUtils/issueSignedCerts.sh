@@ -40,6 +40,7 @@ then
       -out "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.crt" \
       -infiles "$fileName"
 
+    cat "$LEAF_CSR_FILE_PATH/cerRootCA.crt" "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.crt" > "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.chain.pem"
     echo "Signed certificate available at "$LEAF_CSR_FILE_PATH/$fileNameNoExtn.crt
     mv $fileName $LEAF_CSR_USED_FILE_PATH/$cleanFileName
     echo "#######################################################################"
